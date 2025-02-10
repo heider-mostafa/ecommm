@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 /* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
-=======
-/* eslint-disable no-unused-vars */
->>>>>>> bc1034edc5ff62c392bf66269e127a91f7a86d29
+// ... existing code ...
 "use server";
 
 import { revalidatePath } from "next/cache";

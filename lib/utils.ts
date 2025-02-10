@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-=======
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-explicit-any */
->>>>>>> bc1034edc5ff62c392bf66269e127a91f7a86d29
-/* eslint-disable prefer-const */
-/* eslint-disable no-prototype-builtins */
+// ... existing code ...
 import { type ClassValue, clsx } from "clsx";
 import qs from "qs";
 import { twMerge } from "tailwind-merge";

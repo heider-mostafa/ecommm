@@ -1,5 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-explicit-any */
 /* eslint-disable prefer-const */
 /* eslint-disable no-prototype-builtins */
 

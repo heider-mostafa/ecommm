@@ -1,12 +1,11 @@
-import { WebhookEvent, ClerkClient } from "@clerk/nextjs/server";
+/* eslint-disable camelcase */
+import { clerkClient } from "@clerk/nextjs";
+import { WebhookEvent } from "@clerk/nextjs/server";
 import { headers } from "next/headers";
 import { NextResponse } from "next/server";
 import { Webhook } from "svix";
 
 import { createUser, deleteUser, updateUser } from "@/lib/actions/user.actions";
-
-// Create an instance of ClerkClient
-const clerkClient = new ClerkClient();
 
 export async function POST(req: Request) {
   // You can find this in the Clerk Dashboard -> Webhooks -> choose the webhook
@@ -66,8 +65,8 @@ export async function POST(req: Request) {
       clerkId: id,
       email: email_addresses[0].email_address,
       username: username!,
-      firstName: first_name || "",
-      lastName: last_name || "",
+      firstName: first_name,
+      lastName: last_name,
       photo: image_url,
     };
 
@@ -80,6 +79,7 @@ export async function POST(req: Request) {
           userId: newUser._id,
         },
       });
+      console.log("New user has been created!")
     }
 
     return NextResponse.json({ message: "OK", user: newUser });
@@ -90,8 +90,8 @@ export async function POST(req: Request) {
     const { id, image_url, first_name, last_name, username } = evt.data;
 
     const user = {
-      firstName: first_name || "",
-      lastName: last_name || "",
+      firstName: first_name,
+      lastName: last_name,
       username: username!,
       photo: image_url,
     };
